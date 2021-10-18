@@ -1,0 +1,14 @@
+.dropdown-head {
+    position: relative;
+}
+
+.dropdown-item {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+
+.dropdown-head:hover>.dropdown-item {
+    display: block;
+}
