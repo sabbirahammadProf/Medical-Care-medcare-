@@ -14,7 +14,9 @@ module.exports = {
       white: '#ffffff',
       dark: '#000000',
       secondarydark: 'rgba(3, 3, 3, 0.700)',
-      blue: 'blue'
+      lightdark: 'rgba(3, 3, 3, 0.100)',
+      blue: '#4285F4',
+      alert: 'red'
     }
   },
   variants: {

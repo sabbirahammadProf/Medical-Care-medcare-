@@ -1,5 +1,8 @@
 import { GoogleAuthProvider, getAuth, signInWithPopup, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "firebase/auth";
 import { useEffect, useState } from "react";
+import initAuth from '../Firebase/firebase.init';
+
+initAuth();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
@@ -10,22 +13,12 @@ const useFirebase = () => {
 
     const signInUsinggoole = () => {
         setIsLoading(true);
-        signInWithPopup(auth, googleProvider)
-        .then(result => {
-            setUser(result.user);
-            setIsLoading(false);
-        })
-        .catch(error => setError(error.message));
+        return signInWithPopup(auth, googleProvider)
     };
 
     const registerUserUsingEmailPass = (email, password) => {
         setIsLoading(true);
-        createUserWithEmailAndPassword(auth, email, password)
-        .then(result => {
-            setUser(result.user);
-            setIsLoading(false);
-        })
-        .catch(error => setError(error.message));
+        return createUserWithEmailAndPassword(auth, email, password)
     };
 
     const signInUserByEmailPass = (email, password) => {
@@ -62,11 +55,13 @@ const useFirebase = () => {
 
     return {
         user,
+        setUser,
         signInUsinggoole,
         registerUserUsingEmailPass,
         signInUserByEmailPass,
         error,
         logOut,
+        setIsLoading,
         isLoading
     }
 }
