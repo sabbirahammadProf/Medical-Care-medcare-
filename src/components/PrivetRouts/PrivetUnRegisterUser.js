@@ -7,7 +7,7 @@ const PrivetRegisterUser = ({children, ...rest}) => {
     if (isLoading){
         return (
             <div className="text-center">
-                <p className="py-4 font-bold text-2xl">Loading...</p>
+                <p className="xl:pt-20 md:pt-40 pt-20 pb-4 font-bold text-2xl">Loading...</p>
             </div>
         )
     }

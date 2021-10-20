@@ -16,7 +16,7 @@ const Services = () => {
         <section className="pt-12 w-11/12 mx-auto">
             <h2 className="text-3xl">Our services</h2>
             <p>Why we popular? Let's look at our services.</p>
-            <div className="grid grid-cols-3 gap-8 my-10">
+            <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 my-10">
                 {
                     services.map((service) => 
                         <div key={service.service_id} className="shadow-2xl rounded flex px-4 py-12 bg-primary-900 transition-all transform hover:scale-95">

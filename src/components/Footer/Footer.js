@@ -9,7 +9,7 @@ const Footer = () => {
     }
     return (
         <footer className="bg-primary-900 py-8">
-            <div className="w-11/12 mx-auto grid grid-cols-3 gap-8">
+            <div className="w-11/12 mx-auto grid xl:grid-cols-3 grid-cols-1 gap-8">
                 <div>
                     <h2 className="text-xl text-white border-dashed border-b-2 border-white border-opacity-10">Best 5 doctors cell phone number</h2>
                     <ul className="pt-5">

@@ -43,7 +43,7 @@ const Login = () => {
     };
 
     return (
-        <section className="py-12 text-center">
+        <section className="pb-12 text-center xl:pt-20 md:pt-40 pt-20">
             <h2 className="text-primary-500 text-2xl mb-3">Please login!!</h2>
             <div className="flex items-center flex-col justify-center">
             {error && <p className="bg-alert py-2 px-3 rounded text-white my-2">{error}</p>}

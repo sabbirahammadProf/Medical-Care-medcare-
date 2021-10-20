@@ -14,9 +14,9 @@ const ServicesDetails = () => {
     }, []);
     const serviceItem = services.find((item) => item.service_id == serviceID );
     return (
-        <div className="w-11/12 mx-auto my-4">
+        <div className="w-11/12 mx-auto pt-20 pb-10">
             <img src={serviceItem?.service_image} alt="" className="w-full"/>
-            <h1 className="text-4xl pt-8">{serviceItem?.service_title}</h1>
+            <h1 className="text-4xl pt-8 pb-3">{serviceItem?.service_title}</h1>
             <p className="py-1">{serviceItem?.service_description}</p>
         </div>
     );

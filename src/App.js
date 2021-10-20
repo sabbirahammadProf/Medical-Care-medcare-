@@ -11,8 +11,8 @@ import PrivetUnRegisterUser from './components/PrivetRouts/PrivetUnRegisterUser'
 import PrivetRegisterUser from './components/PrivetRouts/PrivetRegisterUser';
 import Blog from './components/Blog/Blog';
 import ServicesDetails from './components/Home/ServicesDetails';
-import Appointment from './components/Appointment/Appointment';
 import NotFound from './components/NotFound/NotFound';
+import Appoint from './components/Appoint/Appoint';
 
 function App() {
   return (
@@ -32,8 +32,8 @@ function App() {
         <PrivetUnRegisterUser exact path="/service/details/:serviceID">
           <ServicesDetails></ServicesDetails>
         </PrivetUnRegisterUser>
-        <PrivetUnRegisterUser exact path="/appointment">
-          <Appointment></Appointment>
+        <PrivetUnRegisterUser path="/appointment">
+          <Appoint></Appoint>
         </PrivetUnRegisterUser>
         <PrivetRegisterUser path="/login">
           <Login></Login>
