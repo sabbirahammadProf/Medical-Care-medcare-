@@ -48,9 +48,9 @@ const Login = () => {
             <div className="flex items-center flex-col justify-center">
             {error && <p className="bg-alert py-2 px-3 rounded text-white my-2">{error}</p>}
                 <form onSubmit={handleLogin} className="flex flex-col">
-                    <input type="email" className="outline-none bg-lightdark rounded py-3 px-8 my-2" placeholder="Enter your email" onBlur={handleUserEmail} autoComplete="none" required/>
-                    <input type="password" className="outline-none bg-lightdark rounded py-3 px-8 my-2" placeholder="Enter your password" autoComplete="off" onBlur={handleUserPassword} required/>
-                    <input type="submit" className="outline-none bg-primary-900 hover:bg-primary-500 transition-all duration-300 cursor-pointer text-white rounded py-3 px-8 my-2" value="Login"/>
+                    <input type="email" className="outline-none bg-lightdark rounded py-3 px-8 my-2 xl:w-full md:w-full sm:w-full w-10/12 mx-auto" placeholder="Enter your email" onBlur={handleUserEmail} autoComplete="none" required/>
+                    <input type="password" className="outline-none bg-lightdark rounded py-3 px-8 my-2 xl:w-full md:w-full sm:w-full w-10/12 mx-auto" placeholder="Enter your password" autoComplete="off" onBlur={handleUserPassword} required/>
+                    <input type="submit" className="outline-none bg-primary-900 hover:bg-primary-500 transition-all duration-300 cursor-pointer text-white rounded py-3 px-8 my-2 xl:w-full md:w-full sm:w-full w-10/12 mx-auto" value="Login"/>
                 </form>
                 <Link to="/signup" className="text-alert py-2">Don't have an account?</Link>
             </div>
