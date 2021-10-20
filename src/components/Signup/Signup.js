@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Signup = () => {
     const history = useHistory();
     const location = useLocation();
-    const redirectUrl = location?.state ? location.state : '/account';
+    const redirectUrl = location?.from?.pathname ? location?.from?.pathname : '/account';
     const [error, setError] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const {signInUsinggoole,  registerUserUsingEmailPass, setUser, setIsLoading} = useAuth();
+    const {signInUsinggoole,  registerUserUsingEmailPass, setUser, setIsLoading, userUpdate} = useAuth();
 
     const handlegooglesign = () => {
         setIsLoading(true);
@@ -21,6 +22,8 @@ const Signup = () => {
         .catch(error => setError(error.message))
         .finally(() => setIsLoading(false));
     };
+
+    
     
     const handleUserEmail = (e) => {
         setEmail(e.target.value);
@@ -40,6 +43,7 @@ const Signup = () => {
         })
         .catch(error => setError(error.message))
         .finally(() => setIsLoading(false));
+        
     };
     
     return (
@@ -52,6 +56,7 @@ const Signup = () => {
                     <input type="password" className="outline-none bg-lightdark rounded py-3 px-8 my-2" placeholder="Enter your password" autoComplete="off" onBlur={handleUserPassword} required/>
                     <input type="submit" className="outline-none bg-primary-900 hover:bg-primary-500 transition-all duration-300 cursor-pointer text-white rounded py-3 px-8 my-2" value="Sign Up"/>
                 </form>
+                <Link to="/login" className="text-alert py-2">Already have an account?</Link>
             </div>
             <p className="py-3">or</p>
             <button className="bg-blue text-white py-3 px-12 rounded" onClick={handlegooglesign}>Continue with google</button>

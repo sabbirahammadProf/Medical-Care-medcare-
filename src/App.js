@@ -12,6 +12,7 @@ import PrivetRegisterUser from './components/PrivetRouts/PrivetRegisterUser';
 import Blog from './components/Blog/Blog';
 import ServicesDetails from './components/Home/ServicesDetails';
 import Appointment from './components/Appointment/Appointment';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
         <PrivetUnRegisterUser path="/account">
           <Account></Account>
         </PrivetUnRegisterUser>
+        <Route path="*">
+          <NotFound></NotFound>
+        </Route>
         </Switch>
         <Footer></Footer>
       </Router>
