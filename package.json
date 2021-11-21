@@ -44,5 +44,18 @@
     "autoprefixer": "^9.8.8",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
-  }
+  },
+  "description": "MedCare is an popular online and offline hospital in Bangladesh. It's provide many digital services for patients.\r ## Why we best\r 1. Online Help\r 2. Helicopter support\r 3. Digital Machine",
+  "main": "craco.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-sabbirahammadProf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-sabbirahammadProf/issues"
+  },
+  "homepage": "https://github.com/Programming-Hero-Web-Course3/healthcare-related-website-sabbirahammadProf#readme"
 }
